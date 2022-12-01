@@ -1,0 +1,22 @@
+<div class="container-fluid main-box">
+  <div class="columns text-center">
+    <div class="box column is-one-third">
+      <h1>Typing Challenge</h1>
+      <span
+        class="text-center isColored"
+        [class]="getText(letter, enteredText[i])"
+        *ngFor="let letter of RandomText.split(''); let i = index"
+        >{{ letter }}</span
+      >
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          (input)="onInput($event.target.value)"
+        />
+      </div>
+
+      <h3 *ngIf="RandomText === enteredText" class="text-success">Success!</h3>
+    </div>
+  </div>
+</div>
