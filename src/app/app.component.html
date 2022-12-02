@@ -9,11 +9,11 @@
         >{{ letter }}</span
       >
       <div class="input-group mb-3">
-        <input
+        <textarea
           type="text"
           class="form-control"
           (input)="onInput($event.target.value)"
-        />
+        ></textarea>
       </div>
 
       <h3 *ngIf="RandomText === enteredText" class="text-success">Success!</h3>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faker } from '@faker-js/faker';
 
 @Component({
   selector: 'my-app',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  RandomText: string = 'Some random text goes here';
+  RandomText: string = faker.lorem.paragraph();
   enteredText: string = '';
   onInput(value: string) {
     this.enteredText = value;
